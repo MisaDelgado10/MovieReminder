@@ -1,6 +1,6 @@
 body{
 
-	background-image: url("img/peli.jpg");
+	background-image: url("https://www.teahub.io/photos/full/220-2205714_get-the-latest-movies-data-src-kodi-tv.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -26,7 +26,7 @@ body{
 }
 
 .formLogin{
-    background-image: url("img/fondo");
+    
 	position: absolute;
 	padding-top: 10%;
 	padding-bottom: 10%;
