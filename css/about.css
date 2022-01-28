@@ -1,41 +1,15 @@
-body{
-    background-color: #012340;
-}
-.menu{
 
-    background-color:#3F618C;
-    display: flex;
-    flex-flow: row;
-    font-weight: bold;
-    list-style-type: none;
-    padding: 7px;
-    font-size: 18px;
-    justify-content: space-evenly;
-    color: #F20544;
-    margin-left: 20px;
-    margin-right: 20PX;
-   }
-.hamburger{
-    display: none;
-}
-header{
-    display: flex;
-    flex: row;
-    align-items: flex-end;
-    justify-content:start;
-    color: #F20544;
-}
 
-.logo{
-    width: 50px;
-}
+/* =====BODY=======================
 
+*/
 body {
-    font-family: "Roboto", sans-serif;
+    background-color: #012340;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-
+    font-family: 'Fira sans',sans-serif;
+}
 .perfilIMG{
     padding: 15px;
     float: left;
