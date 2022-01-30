@@ -7,28 +7,30 @@
     <title>About-Us</title>
     <link rel="stylesheet" href="css/about.css" type="text/css">
 </head>
-<body>
-    <header>
-        <div>
-          <img class="logo"src="https://newsweekespanol.com/wp-content/uploads/2018/01/Netflix-Logo-png-768x640.jpg">
+
+<header>
+           <!--Navigation bar-->
+           <div id="nav-placeholder">
+
         </div>
-        <h1 class="title">Movie Reminder</h1>
-   </header>
-
-    <nav class="navbar">
-          <div class="hamburger2">&#9776;</div>
-          <ul class="menu">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="library.html">My movies</a></li> 
-              <li><a href="search.html">Search</a></li> 
-              <li>About us</li>
-
-          </ul>
-    </nav>
-
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script>
+      $.get("navBar.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+        </script>
+        <!--end of Navigation bar-->
+</header>
+<body>
+    <section>
+        
+    </section>
     <div class="people">
         <section class="perfilIMG">
-            <img src="images/no-avatar.png" width="300" height="300">
+            <img src="img/no-avatar.png" width="300" height="300">
         </section>
         <section class="textPeople">
          
@@ -62,7 +64,7 @@
 
     <div class="people3">
         <section class="perfilIMG">
-            <img src="images/no-avatar.png" width="300" height="300">
+            <img src="img/no-avatar.png" width="300" height="300">
         </section>
         <section class="textPeople">
          
@@ -77,8 +79,5 @@
         </section>
     </div>
     
-
-    
-    </div>
 </body>
 </html>
