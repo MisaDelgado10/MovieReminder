@@ -11,20 +11,22 @@
 </head>
 <body>
     <header>
-      <div>
-        <img class="logo"src="https://newsweekespanol.com/wp-content/uploads/2018/01/Netflix-Logo-png-768x640.jpg">
+       <!--Navigation bar-->
+       <div id="nav-placeholder">
+
       </div>
-      <h1 class="title">Movie Reminder</h1>
+      <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+      <script>
+    $.get("navBar.html", function(data){
+      $("#nav-placeholder").replaceWith(data);
+  });
+      </script>
+      <!--end of Navigation bar-->
     </header>
-    <nav class="navbar">
-		<div class="hamburger2">&#9776;</div>
-		<ul class="menu">
-			<li>Home</li>
-			<li><a href="library.html">My movies</a></li> 
-			<li><a href="search.html">Search</a></li> 
-			<li><a href="about.html">About</a></li> 
-		</ul>
-	</nav>
+  
   <!--Carousel Starts-->
   <!--new movies-->
   <div id="carousel-new-movies" class="carousel slide" data-ride="carousel">
