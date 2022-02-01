@@ -111,6 +111,21 @@ h1{
     background-color: var(--primary);
 
 }
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-container ul{
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.dropdown-container:hover ul{ 
+    max-height: 400px;
+    right: 5px;
+  
+}
 
 @media(min-width:768px){
     .hamburger{
