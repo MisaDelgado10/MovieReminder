@@ -10,3 +10,8 @@ logout.addEventListener('click',function(){
     alert("you want to log out")
 })
 
+
+hamburger.addEventListener('click',function(){
+    document.querySelector(".dropdown-container ul").classList.toggle("show")
+})
+
