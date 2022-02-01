@@ -1,40 +1,73 @@
+ body {
+        margin-top: 70px;
+        background-color: #012340;
+        font-family: 'Fira sans',sans-serif;
+    }
+    .textPeople{
+        color: white;
+    }
+
+    .perfilIMG{
+        display:flex;
+        justify-content: center;
+    }
 
 
-/* =====BODY=======================
+/*  tablets */
+@media (min-width: 768px) and (max-width: 1024px)  {
+    body {
+        margin-top: 70px;
+        background-color: #012340;
+        font-family: 'Fira sans',sans-serif;
+    }
 
-*/
-body {
-    margin-top: 55px;
-    background-color: #012340;
-    box-sizing: border-box;
-    font-family: 'Fira sans',sans-serif;
+    .textPeople{
+        color: white;
+    }
+
+    .perfilIMG{
+        display:flex;
+        justify-content: center;
+    }
+
 }
 
-
-.perfilIMG{
-    padding: 15px;
-    float: left;
-
-
-}
-
-.people{
-  padding: 10px;
-  
-}
+/* pantallas grandes */
+@media (min-width: 1025px) {
+    body {
+        margin-top: 55px;
+        background-color: #012340;
+        box-sizing: border-box;
+        font-family: 'Fira sans',sans-serif;
+    }
 
 
-.people2{
-    float: left;
-    padding: 10px;
-}
-  
-.people3{
-    float: left;
-    padding: 10px;
-}
+    .perfilIMG{
+        padding: 15px;
+        float: left;
 
-.textPeople{
-    color: white;
-    padding: 10px;
+
+    }
+
+    .people{
+     padding: 10px;
+    
+    }
+
+
+    .people2{
+        float: left;
+        padding: 10px;
+    }
+    
+    .people3{
+        float: left;
+        padding: 10px;
+    }
+
+    .textPeople{
+        color: white;
+        padding: 10px;
+    }
+
 }
