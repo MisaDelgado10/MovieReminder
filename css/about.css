@@ -1,5 +1,5 @@
  body {
-        margin-top: 70px;
+        margin-top: 90px;
         background-color: #012340;
         font-family: 'Fira sans',sans-serif;
     }
@@ -16,7 +16,7 @@
 /*  tablets */
 @media (min-width: 768px) and (max-width: 1024px)  {
     body {
-        margin-top: 70px;
+        margin-top: 95px;
         background-color: #012340;
         font-family: 'Fira sans',sans-serif;
     }
@@ -35,7 +35,7 @@
 /* pantallas grandes */
 @media (min-width: 1025px) {
     body {
-        margin-top: 55px;
+        margin-top: 80px;
         background-color: #012340;
         box-sizing: border-box;
         font-family: 'Fira sans',sans-serif;
