@@ -5,11 +5,22 @@ const indicators = document.querySelectorAll(".indicator");
 
 let baseSliderWidth = slider.offsetWidth;
 let activeIndex = 0; // the current page on the slider
-
-let movies = [
+let recent_movies_2 ={}
+api_key = "571b4aea0875e39f94c28d07da3d7ca9"
+language = "en"
+region = "US"
+release_date = "2021-12-31"
+api_discover = "https://api.themoviedb.org/3/discover/movie?api_key"
+api_url_discover = `${api_discover}=${api_key}&language=${language}-${region}&region=${region}&primary_release_date.lte=${release_date}&sort_by=primary_release_date.desc&page=1` 
+console.log(api_url_discover);
+$.get(api_url_discover, function( data ) {
+    recent_movies_2 =data;
+    console.log(recent_movies_2);
+  });
+let recent_movies = [
   {
     src:
-      "https://images.unsplash.com/photo-1585951237318-9ea5e175b891?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://image.tmdb.org/t/p/w500/b6IlbuzmxE9E73SuOFTjAjNAbfO.jpg",
   },
   {
     src:
@@ -83,10 +94,10 @@ let movies = [
       "https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
 ];
-
-// Fill the slider with all the movies in the "movies" array
+console.log(recent_movies);
+// Fill the slider with all the recent_movies in the "recent_movies" array
 function populateSlider() {
-  movies.forEach((image) => {
+  recent_movies.forEach((image) => {
     // Clone the initial movie thats included in the html, then replace the image with a different one
     const newMovie = document.getElementById("movie0");
     let clone = newMovie.cloneNode(true);
@@ -117,7 +128,7 @@ function updateIndicators(index) {
 btnLeft.addEventListener("click", (e) => {
   let movieWidth = document.querySelector(".movie").getBoundingClientRect()
     .width;
-  let scrollDistance = movieWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+  let scrollDistance = movieWidth * 6; // Scroll the length of 6 recent_movies. TODO: make work for mobile because (4 recent_movies/page instead of 6)
 
   slider.scrollBy({
     top: 0,
@@ -133,7 +144,7 @@ btnLeft.addEventListener("click", (e) => {
 btnRight.addEventListener("click", (e) => {
   let movieWidth = document.querySelector(".movie").getBoundingClientRect()
     .width;
-  let scrollDistance = movieWidth * 6; // Scroll the length of 6 movies. TODO: make work for mobile because (4 movies/page instead of 6)
+  let scrollDistance = movieWidth * 6; // Scroll the length of 6 recent_movies. TODO: make work for mobile because (4 recent_movies/page instead of 6)
 
   console.log(`movieWidth = ${movieWidth}`);
   console.log(`scrolling right ${scrollDistance}`);
@@ -161,6 +172,7 @@ btnRight.addEventListener("click", (e) => {
   }
 });
 
+console.log(recent_movies_2);
 // slider.addEventListener("scroll", (e) => {
 //   console.log(slider.scrollLeft);
 //   console.log(slider.offsetWidth);
