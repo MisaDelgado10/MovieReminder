@@ -7,7 +7,7 @@ hamburger.addEventListener('click',function(){
 const logout=document.querySelector('.log');
 
 logout.addEventListener('click',function(){
-    alert("you want to log out")
+    alert("¿you want to log out?")
 })
 
 
