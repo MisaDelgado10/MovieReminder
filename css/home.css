@@ -6,7 +6,7 @@
     padding: 5px;
     font-size: 18px;
     justify-content: space-evenly;
-   }
+}
 .hamburger{
     display: none;
 }
@@ -20,7 +20,7 @@ header{
     width: 50px;
 }
 body {
-    margin-top: 55px;
+    margin-top: 90px;
     background-color: #012340;
     font-family: "Roboto", sans-serif;
     margin: 0;
