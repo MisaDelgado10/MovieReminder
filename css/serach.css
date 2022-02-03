@@ -1,0 +1,46 @@
+body {
+    margin-top: 95px;
+    background-color: #012340;
+    font-family: 'Fira sans',sans-serif;
+}
+
+#movies {
+    width: 70%;
+}
+  
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 14px;
+  }
+
+  .clear-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 10px;
+    cursor: pointer;
+    visibility: hidden; 
+  }
+
+.search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #3f618c;
+}
+
+.search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+  }
