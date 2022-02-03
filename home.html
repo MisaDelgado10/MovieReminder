@@ -8,14 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/base.css">
-    <script src="https://kit.fontawesome.com/a0043d9bc2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
        <!--Navigation bar-->
        <div id="nav-placeholder">
-
       </div>
       <script
       src="https://code.jquery.com/jquery-3.4.1.js"
@@ -29,54 +26,30 @@
       <!--end of Navigation bar-->
     </header>
   
-  <!--Carousel Starts-->
-  <div class="container">
-    <button type="button" id="moveLeft" class="btn-nav">
-      ᐊ
-    </button>
-    <div class="container-indicators">
-      <div class="indicator active" data-index=0></div>
-      <div class="indicator" data-index=1></div>
-      <div class="indicator" data-index=2></div>
-    </div>
-    <div class="slider" id="mySlider">
-      <h1>Recent Movies</h1>
-      <div class="movie" id="movie0">
-        <img
-          src="https://images.unsplash.com/photo-1585951237318-9ea5e175b891?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-          alt="" srcset="">
-        <div class="description">
-          <div class="description__buttons-container">
-            <div class="description__button"><i class="fas fa-play"></i></div>
-            <div class="description__button"><i class="fas fa-plus"></i></div>
-            <div class="description__button"><i class="fas fa-thumbs-up"></i></div>
-            <div class="description__button"><i class="fas fa-thumbs-down"></i></div>
-            <div class="description__button"><i class="fas fa-chevron-down"></i></div>
-          </div>
-          <div class="description__text-container">
-            <span class="description__match">97% Match</span>
-            <span class="description__rating">TV-14</span>
-            <span class="description__length">2h 11m</span>
-            <br><br>
-            <span>Explosive</span>
-            <span>&middot;</span>
-            <span>Exciting</span>
-            <span>&middot;</span>
-            <span>Family</span>
-          </div>
-        </div>
+  <!--Carousel New Releases Starts-->
+    <div class="carousel">
+      <div class="carouselbox" id="new-releases">
+        <!--This data will be queried from the API-->
       </div>
+      <a class="switchLeft sliderButton" onclick="sliderScrollLeftNew()"><</a>
+      <a class="switchRight sliderButton" onclick="sliderScrollRightNew()">></a>
     </div>
-    <button type="button" id="moveRight" class="btn-nav">
-      ᐅ
-    </button>
-  </div>
-  <!--Carousel Ends-->
+  <!--Carousel New Releases Ends-->
 
+  <!--Carousel Popular Releases Starts-->
+    <div class="carousel">
+      <div class="carouselbox" id="popular-releases">
+        <!--This data will be queried from the API-->
+      </div>
+      <a class="switchLeft sliderButton" onclick="sliderScrollLeftPopular()"><</a>
+      <a class="switchRight sliderButton" onclick="sliderScrollRightPopular()">></a>
+    </div>
+  <!--Carousel Popular Releases Ends-->
   <!-- Optional JavaScript -->
   <script src="js/home.js"></script>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS, Slick -->
+  <!-- jQuery first, then Axios, then Bootstrap JS-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
