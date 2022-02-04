@@ -3,6 +3,7 @@
 }
   
 .wrapper {
+  margin-top: 90px;
   position: relative;
   display: flex;
   min-width: 100px;

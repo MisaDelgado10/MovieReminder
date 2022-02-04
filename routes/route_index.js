@@ -14,6 +14,17 @@ router.get('/search', async function(req,res){
   res.render('search');
 });
 
+router.get('/about', async function(req,res){
+  res.render('about');
+});
+
+router.get('/login', async function(req,res){
+  res.render('login');
+});
+
+router.get('/register', async function(req,res){
+  res.render('register');
+});
 router.get('/newUser', async (req,res) =>{
   res.render('newUser');
 });
