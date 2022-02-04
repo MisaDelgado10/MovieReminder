@@ -15,7 +15,7 @@ body {
   min-width: 100px;
 }
 
-button,
+#add-movie,
 input[type="submit"] {
   padding: 5px 20px;
   font-size: 18px;
@@ -27,7 +27,7 @@ input[type="submit"] {
   box-shadow: 2px 2px 3px #bbb;
 }
 
-button:hover,
+#add-movie:hover,
 input[type="submit"]:hover {
 background: #9e183c;
 }
