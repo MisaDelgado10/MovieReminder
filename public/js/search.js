@@ -51,35 +51,7 @@ $(document).ready(function() {
     $.ajax(peticion)
   
   }
-  
-  $("#movies").on("click", ".imgMovie", function(e){
-  
-    console.log("Se dio click")
-    e.preventDefault();
-    let movieId =$(this).attr("data-type");
-    let peticion = {
-      url:`https://api.themoviedb.org/3/movie/${movieId}?api_key=571b4aea0875e39f94c28d07da3d7ca9`,
-      success: function (element) {
-        
-  
-        console.log(`${element.id}`)
-        console.log(`${element.original_title}`)
-        console.log(`${element.poster_path}`)
-        console.log(`${element.overview}`)
-  
-  
-        
-        
-      } ,
-      error: function () {
-       console.log("No se ha podido obtener la información")   
-      }
-    }
-    
-    
-    $.ajax(peticion)
-  
-  })
+
   
   
   });

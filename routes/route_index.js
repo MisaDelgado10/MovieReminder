@@ -68,6 +68,13 @@ router.post('/', async (req,res) =>{
   res.redirect("/")
 });
 
+router.post('/search', async (req,res) =>{
+  let user = new User(req.body)
+  await user.save()
+  res.redirect("search")
+});
+
+
 router.get('/edit/:id', async (req,res) =>{
   let id = req.params.id
   let user = await User.findById(id)
