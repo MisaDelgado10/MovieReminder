@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../model/user');
+let verify = require('../middleware/verifyAccess')
 
 var app = express();
 // Sets up the Express app to handle data parsing
@@ -27,7 +28,7 @@ let userList= {
   ]
 }
 
-router.get('/', async function(req,res){
+router.get('/', verify, async function(req,res){
 
   let users = await User.find()
 

@@ -3,7 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
-const cookieParser = require("cookie-parser")
+const cookieParser = require('cookie-parser')
 
 
 dotenv.config();
@@ -30,7 +30,7 @@ app.use(express.static('public'));
 // middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}));
-app.use(cookieParser())
+app.use(cookieParser());
 
 
 // routes
