@@ -1,9 +1,13 @@
+body{
+    background-color: #012340;
+    font-family: "Roboto", sans-serif;
+    margin-top: 100px;
+}
 :root{
     --primary: #f20544;
     --ligth:white;
     --dark:#011826;
 }
-
 #navBarID{
     background-color:var(--dark);
     box-sizing: border-box;
