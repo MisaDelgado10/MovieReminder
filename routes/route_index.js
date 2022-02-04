@@ -2,7 +2,9 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../model/user');
-let verify = require('../middleware/verifyAccess')
+let verify = require('../middleware/verifyAccess');
+let bcrypt = require("bcrypt");
+let jwt =require("jsonwebtoken")
 
 var app = express();
 // Sets up the Express app to handle data parsing
@@ -43,13 +45,36 @@ router.get('/about', async function(req,res){
   res.render('about');
 });
 
+
+
 router.get('/login', async function(req,res){
   res.render('login');
 });
 
+router.post('/login', async (req,res)=>{
+
+  let email = req.body.email
+  let password = req.body.password
+
+  let user = await User.findOne({email: email})
+
+  if (!user){
+    res.json({status: 'No existe'})
+    //res.redirect('/login')
+  }
+  else{
+    res.json({status:'Existe'})
+  }
+
+  //res.redirect('/')
+})
+
 router.get('/register', async function(req,res){
   res.render('register');
 });
+
+
+
 router.get('/newUser', async (req,res) =>{
   res.render('newUser');
 });
@@ -57,8 +82,11 @@ router.get('/newUser', async (req,res) =>{
 router.post('/newUser', async (req,res) =>{
 
   let user = new User(req.body)
+
+  user.password = bcrypt.hashSync(user.password,10)
   await user.save()
-  res.redirect("/")
+  res.redirect("/login")
+
 });
 
 
