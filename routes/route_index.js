@@ -54,17 +54,20 @@ router.get('/login', async function(req,res){
 router.post('/login', async (req,res)=>{
 
   let email = req.body.email
-  let password = req.body.password
+  let passw = req.body.password
 
   let user = await User.findOne({email: email})
 
   if (!user){
-    res.json({status: 'No existe'})
-    //res.redirect('/login')
+    res.redirect('/login')
   }
   else{
-    res.json({status:'Existe'})
-  }
+    let valid = await bcrypt.compareSync(passw, user.password)
+
+    if (valid){
+      let token = jwt.sign({},)
+    }
+    }
 
   //res.redirect('/')
 })
