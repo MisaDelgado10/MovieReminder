@@ -65,7 +65,8 @@ router.post('/login', async (req,res)=>{
     let valid = await bcrypt.compareSync(passw, user.password)
 
     if (valid){
-      let token = jwt.sign({},)
+      let token = jwt.sign({}, process.env.SECRET, {expiresIn: "2h"});
+      console.log(token)
     }
     }
 
