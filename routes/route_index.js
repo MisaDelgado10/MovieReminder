@@ -8,24 +8,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-let userList= {
-  user_name: "Misa",
-  email: "Misalchicha@yo.com",
-  password: "12345",
-  user_id: "1",
-  movie_list: [
-    {
-      title: "Titane",
-      description:"Esta muy buena",
-      img_path:"https://image.tmdb.org/t/p/w185//qSrHo1HEEMBuK2HrwZGPGJZg7gP.jpg"
-    },
-    {
-      title: "Dont look up",
-      description:"Esta muy buena",
-      img_path:"https://image.tmdb.org/t/p/w185//38Pcnns6M8cmxNPrvFbw1cT1AW2.jpg"
-    }
-  ]
-}
+
 
 router.get('/', async function(req,res){
 
